@@ -9,7 +9,7 @@ function CVOutput({ personal, education, experience }) {
           <p>{personal.address}</p>
         </div>
       </header>
-      <main>
+      <main aria-label="CV main">
         {!!education && (
           <section>
             <h2>Education</h2>
