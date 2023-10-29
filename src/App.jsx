@@ -45,9 +45,14 @@ function App() {
 
   return (
     <>
-      <h1>Test</h1>
+      <DetailsMenu></DetailsMenu>
+      <CVOutput
+        personal={personalData}
+        education={educationData}
+        experience={experienceData}
+      ></CVOutput>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
