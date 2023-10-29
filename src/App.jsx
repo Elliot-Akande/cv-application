@@ -1,5 +1,7 @@
-import { useState } from 'react'
-import './styles/App.css'
+import { useState } from "react";
+import DetailsMenu from "./components/DetailsMenu";
+import CVOutput from "./components/CVOutput";
+import "./styles/App.css";
 
 function App() {
 
