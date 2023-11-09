@@ -3,6 +3,7 @@ import DetailsMenu from "./components/DetailsMenu";
 import PersonalForm from "./components/PersonalForm";
 import CVOutput from "./components/CVOutput";
 import "./styles/App.css";
+import { v4 as uuid } from "uuid";
 
 function App() {
   const [personalData, setPersonalData] = useState({
