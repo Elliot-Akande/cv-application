@@ -6,6 +6,7 @@ import "./styles/App.css";
 import { v4 as uuid } from "uuid";
 
 function App() {
+  const [currentMenu, setCurrentMenu] = useState(0);
   const [personalData, setPersonalData] = useState({
     name: "Elliot Akande",
     email: "elliotakande@gmail.com",
