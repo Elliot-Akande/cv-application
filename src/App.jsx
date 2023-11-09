@@ -16,7 +16,7 @@ function App() {
   });
   const [educationData, setEducationData] = useState([
     {
-      id: 0,
+      id: uuid(),
       school: "University of Strathclyde",
       degree: "Bachelors in Computer Science",
       start: "08/2020",
@@ -26,7 +26,7 @@ function App() {
   ]);
   const [experienceData, setExperienceData] = useState([
     {
-      id: 0,
+      id: uuid(),
       company: "Umbrella Inc.",
       position: "UX & UI Designer",
       start: "08/2020",
@@ -36,7 +36,7 @@ function App() {
         "Designed and prototyped user interface patterns for various clients in various industries, ranging from self-service apps within the telecommunications-sector to mobile games for IOS and Android",
     },
     {
-      id: 1,
+      id: uuid(),
       company: "Black Mesa Labs",
       position: "UX Research Assistant",
       start: "04/2018",
