@@ -3,6 +3,7 @@ import DetailsMenu from "./components/DetailsMenu";
 import PersonalForm from "./components/PersonalForm";
 import CVOutput from "./components/CVOutput";
 import "./styles/App.css";
+import DetailsList from "./components/DetailsList";
 import { v4 as uuid } from "uuid";
 
 function App() {
@@ -53,10 +54,38 @@ function App() {
   return (
     <>
       <aside>
+        <DetailsMenu
+          title="Personal Details"
+          isOpen={currentMenu === 0}
+          handleMenuPressed={() => handleMenuPressed(0)}
+        >
           <PersonalForm
             data={personalData}
             setData={setPersonalData}
           ></PersonalForm>
+        </DetailsMenu>
+        <DetailsMenu
+          title="Education"
+          isOpen={currentMenu === 1}
+          handleMenuPressed={() => handleMenuPressed(1)}
+        >
+          <DetailsList
+            data={educationData}
+            setData={setEducationData}
+            type="school"
+          ></DetailsList>
+        </DetailsMenu>
+        <DetailsMenu
+          title="Experience"
+          isOpen={currentMenu === 2}
+          handleMenuPressed={() => handleMenuPressed(2)}
+        >
+          <DetailsList
+            data={experienceData}
+            setData={setExperienceData}
+            type="company"
+          ></DetailsList>
+        </DetailsMenu>
       </aside>
       <main>
         <CVOutput
