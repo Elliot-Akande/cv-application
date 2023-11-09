@@ -1,5 +1,6 @@
 import { useState } from "react";
 import DetailsMenu from "./components/DetailsMenu";
+import PersonalForm from "./components/PersonalForm";
 import CVOutput from "./components/CVOutput";
 import "./styles/App.css";
 
@@ -43,14 +44,25 @@ function App() {
     },
   ]);
 
+  const handleMenuPressed = (index) => {
+    index !== currentMenu ? setCurrentMenu(index) : setCurrentMenu(-1);
+  };
+
   return (
     <>
-      <DetailsMenu></DetailsMenu>
-      <CVOutput
-        personal={personalData}
-        education={educationData}
-        experience={experienceData}
-      ></CVOutput>
+      <aside>
+          <PersonalForm
+            data={personalData}
+            setData={setPersonalData}
+          ></PersonalForm>
+      </aside>
+      <main>
+        <CVOutput
+          personal={personalData}
+          education={educationData}
+          experience={experienceData}
+        ></CVOutput>
+      </main>
     </>
   );
 }
