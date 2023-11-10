@@ -1,6 +1,6 @@
 # CV Lab
 
-![image](https://github.com/Elliot-Akande/cv-application/assets/92980481/a3c91574-b840-4740-83e2-6d883151b750)
+![image](https://github.com/Elliot-Akande/cv-application/assets/92980481/2b0075e6-91ba-4994-9000-29136642f3c6)
 
 CV Creator is a simple web application that allows you to create a professional-looking CV in minutes.
 
