@@ -1,11 +1,16 @@
 :root {
+  --primary-colour: #1a1a1a;
+  --secondary-colour: #242424;
+  --text-colour: #ffffffde;
+  --accent-colour: #b9f256;
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--text-colour);
+  background-color: var(--secondary-colour);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -26,7 +31,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -43,7 +48,8 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  color: var(--text-colour);
+  background-color: var(--primary-colour);
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -55,15 +61,22 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+ul {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    --text-colour: #213547;
+    --primary-colour: #fff;
+    --secondary-colour: #f0f0f0;
+    --accent-colour: #0e374e;
   }
   a:hover {
     color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
   }
 }
