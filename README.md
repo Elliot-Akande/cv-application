@@ -18,4 +18,4 @@ The aim of this project was to become more comfortable working with *React* comp
 
 ### Demo
 
-You can also play the game online by visiting this link: [CV Lab](https://elliot-akande.github.io/battleship/)
+You can also play the game online by visiting this link: [CV Lab](https://main--cv-lab.netlify.app/)
