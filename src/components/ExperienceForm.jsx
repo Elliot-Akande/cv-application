@@ -13,6 +13,8 @@ function ExperienceForm({ data, setData }) {
             id="company"
             value={company}
             onChange={(e) => setData("company", e.target.value)}
+            autoCapitalize="on"
+            autoComplete="on"
           />
         </li>
         <li>
@@ -22,6 +24,8 @@ function ExperienceForm({ data, setData }) {
             id="position"
             value={position}
             onChange={(e) => setData("position", e.target.value)}
+            autoCapitalize="on"
+            autoComplete="on"
           />
         </li>
         <li>
@@ -31,6 +35,7 @@ function ExperienceForm({ data, setData }) {
             id="start"
             value={start}
             onChange={(e) => setData("start", e.target.value)}
+            autoComplete="on"
           />
         </li>
         <li>
@@ -40,6 +45,7 @@ function ExperienceForm({ data, setData }) {
             id="end"
             value={end}
             onChange={(e) => setData("end", e.target.value)}
+            autoComplete="on"
           />
         </li>
         <li>
@@ -49,10 +55,11 @@ function ExperienceForm({ data, setData }) {
             id="location"
             value={location}
             onChange={(e) => setData("location", e.target.value)}
+            autoComplete="location"
           />
         </li>
         <li>
-          <label htmlFor="description">description</label>
+          <label htmlFor="description">Description</label>
           <textarea
             id="description"
             cols="30"
