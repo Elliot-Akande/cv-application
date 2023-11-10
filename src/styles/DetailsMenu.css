@@ -1,0 +1,30 @@
+.detailsMenu {
+  text-align: start;
+  border-radius: 14px;
+  padding: 16px 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+
+.detailsMenu--active {
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
+}
+
+.detailsMenu > h2 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.detailsMenu > h2 > *:last-child {
+  margin-left: auto;
+}
+
+.detailsMenu [data-testid="ExpandMoreIcon"] {
+  transition: transform 220ms;
+}
+
+.detailsMenu--active [data-testid="ExpandMoreIcon"] {
+  transform: rotate(180deg);
+}
