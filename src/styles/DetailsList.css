@@ -1,0 +1,22 @@
+.detailsList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detailsList--active {
+  padding-top: 4px;
+}
+
+.detailsList__add {
+  padding: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+}
