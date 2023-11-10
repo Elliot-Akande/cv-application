@@ -1,6 +1,8 @@
 import DetailsItem from "./DetailsItem";
 import { useState } from "react";
 import { v4 as uuid } from "uuid";
+import AddIcon from "@mui/icons-material/Add";
+import "/src/styles/DetailsList.css";
 
 function DetailsList({ data, setData, type }) {
   const [currentItem, setCurrentItem] = useState(-1);
@@ -56,10 +58,17 @@ function DetailsList({ data, setData, type }) {
   ));
 
   return (
-    <>
+    <div
+      className={`detailsList ${currentItem === -1 && "detailsList--active"}`}
+    >
       {currentItem >= 0 ? items[currentItem] : items}
-      {currentItem < 0 && <button onClick={addItem}>Add new</button>}
-    </>
+      {currentItem < 0 && (
+        <button onClick={addItem} className="detailsList__add">
+          <AddIcon />
+          Add new
+        </button>
+      )}
+    </div>
   );
 }
 
