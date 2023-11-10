@@ -1,0 +1,33 @@
+.detailsItem {
+  border-radius: 0;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 14px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+
+.detailsItem__btns {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 6px;
+  padding-top: 2px;
+  padding-bottom: 10px;
+  position: relative;
+  z-index: 10;
+}
+
+.detailsItem__btns > button {
+  font-weight: bold;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+
+.detailsItem__btns > button:first-child {
+  background-color: var(--accent-colour);
+  color: var(--primary-colour);
+}
