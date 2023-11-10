@@ -1,18 +1,22 @@
 import { useState } from "react";
+import ScienceIcon from "@mui/icons-material/Science";
+import SchoolIcon from "@mui/icons-material/School";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import { v4 as uuid } from "uuid";
 import DetailsMenu from "./components/DetailsMenu";
 import PersonalForm from "./components/PersonalForm";
 import CVOutput from "./components/CVOutput";
-import "./styles/App.css";
 import DetailsList from "./components/DetailsList";
-import { v4 as uuid } from "uuid";
+import "./styles/App.css";
 
 function App() {
   const [currentMenu, setCurrentMenu] = useState(0);
   const [personalData, setPersonalData] = useState({
-    name: "Elliot Akande",
-    email: "elliotakande@gmail.com",
+    name: "Gordan Freeman",
+    email: "gmanlives@protonmail.com",
     phone: "+44 7344 924019",
-    address: "Saltcoats, UK",
+    address: "Glasgow, UK",
   });
   const [educationData, setEducationData] = useState([
     {
@@ -33,7 +37,7 @@ function App() {
       end: "present",
       location: "Glasgow, UK",
       description:
-        "Designed and prototyped user interface patterns for various clients in various industries, ranging from self-service apps within the telecommunications-sector to mobile games for IOS and Android",
+        "Designed and prototyped user interface patterns for various clients in various industries, ranging from self-service apps within the telecommunications-sector to mobile games for IOS and Android.",
     },
     {
       id: uuid(),
@@ -53,47 +57,56 @@ function App() {
 
   return (
     <>
-      <aside>
-        <DetailsMenu
-          title="Personal Details"
-          isOpen={currentMenu === 0}
-          handleMenuPressed={() => handleMenuPressed(0)}
-        >
-          <PersonalForm
-            data={personalData}
-            setData={setPersonalData}
-          ></PersonalForm>
-        </DetailsMenu>
-        <DetailsMenu
-          title="Education"
-          isOpen={currentMenu === 1}
-          handleMenuPressed={() => handleMenuPressed(1)}
-        >
-          <DetailsList
-            data={educationData}
-            setData={setEducationData}
-            type="school"
-          ></DetailsList>
-        </DetailsMenu>
-        <DetailsMenu
-          title="Experience"
-          isOpen={currentMenu === 2}
-          handleMenuPressed={() => handleMenuPressed(2)}
-        >
-          <DetailsList
-            data={experienceData}
-            setData={setExperienceData}
-            type="company"
-          ></DetailsList>
-        </DetailsMenu>
-      </aside>
-      <main>
-        <CVOutput
-          personal={personalData}
-          education={educationData}
-          experience={experienceData}
-        ></CVOutput>
-      </main>
+      <nav>
+        <ScienceIcon style={{ fontSize: "38px" }} />
+        CV Lab
+      </nav>
+      <div className="content">
+        <aside>
+          <DetailsMenu
+            title="Personal Details"
+            isOpen={currentMenu === 0}
+            handleMenuPressed={() => handleMenuPressed(0)}
+            icon={AccountCircleIcon}
+          >
+            <PersonalForm
+              data={personalData}
+              setData={setPersonalData}
+            ></PersonalForm>
+          </DetailsMenu>
+          <DetailsMenu
+            title="Education"
+            isOpen={currentMenu === 1}
+            handleMenuPressed={() => handleMenuPressed(1)}
+            icon={SchoolIcon}
+          >
+            <DetailsList
+              data={educationData}
+              setData={setEducationData}
+              type="school"
+            ></DetailsList>
+          </DetailsMenu>
+          <DetailsMenu
+            title="Experience"
+            isOpen={currentMenu === 2}
+            handleMenuPressed={() => handleMenuPressed(2)}
+            icon={BusinessCenterIcon}
+          >
+            <DetailsList
+              data={experienceData}
+              setData={setExperienceData}
+              type="company"
+            ></DetailsList>
+          </DetailsMenu>
+        </aside>
+        <main>
+          <CVOutput
+            personal={personalData}
+            education={educationData}
+            experience={experienceData}
+          ></CVOutput>
+        </main>
+      </div>
     </>
   );
 }
