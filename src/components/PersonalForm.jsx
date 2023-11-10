@@ -13,6 +13,8 @@ function PersonalForm({ data, setData }) {
             id="name"
             value={name}
             onChange={(e) => setData({ ...data, name: e.target.value })}
+            autoComplete="name"
+            autoCapitalize="words"
           />
         </li>
         <li>
@@ -22,6 +24,7 @@ function PersonalForm({ data, setData }) {
             id="email"
             value={email}
             onChange={(e) => setData({ ...data, email: e.target.value })}
+            autoComplete="email"
           />
         </li>
         <li>
@@ -31,6 +34,7 @@ function PersonalForm({ data, setData }) {
             id="phone"
             value={phone}
             onChange={(e) => setData({ ...data, phone: e.target.value })}
+            autoComplete="phone"
           />
         </li>
         <li>
@@ -40,6 +44,7 @@ function PersonalForm({ data, setData }) {
             id="address"
             value={address}
             onChange={(e) => setData({ ...data, address: e.target.value })}
+            autoComplete="address"
           />
         </li>
       </ul>
