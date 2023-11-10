@@ -1,6 +1,53 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* margin: 0 auto; */
   text-align: center;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+nav {
+  padding: 14px 25px;
+  align-self: normal;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+  background-color: var(--primary-colour);
+  color: var(--accent-colour);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.content {
+  max-width: 1280px;
+  padding: 2rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+main {
+  min-height: 860px;
+  max-width: 730px;
+  background-color: var(--primary-colour);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+aside {
+  width: 400px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+aside button {
+  width: 100%;
 }
