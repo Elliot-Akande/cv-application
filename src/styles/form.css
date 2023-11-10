@@ -1,0 +1,44 @@
+form {
+  position: relative;
+  z-index: 4;
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.06);
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  padding: 10px 20px 30px 20px;
+  background-color: var(--primary-colour);
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input,
+textarea {
+  padding: 12px;
+  background-color: var(--secondary-colour);
+  color: var(--text-colour);
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+label {
+  font-weight: bold;
+}
