@@ -1,16 +1,38 @@
+import PhoneIcon from "@mui/icons-material/Phone";
+import PlaceIcon from "@mui/icons-material/Place";
+import EmailIcon from "@mui/icons-material/Email";
+import "/src/styles/CVOutput.css";
+
 function CVOutput({ personal, education, experience }) {
+  const iconStyle = { fontSize: "22px" };
+
   return (
     <>
       <header>
         <h1>{personal.name}</h1>
         <div>
-          <p>{personal.email}</p>
-          <p>{personal.phone}</p>
-          <p>{personal.address}</p>
+          {personal.email && (
+            <p>
+              <EmailIcon style={iconStyle} />
+              {personal.email}
+            </p>
+          )}
+          {personal.phone && (
+            <p>
+              <PhoneIcon style={iconStyle} />
+              {personal.phone}
+            </p>
+          )}
+          {personal.address && (
+            <p>
+              <PlaceIcon style={iconStyle} />
+              {personal.address}
+            </p>
+          )}
         </div>
       </header>
       <main aria-label="CV main">
-        {!!education && (
+        {!!education.length > 0 && (
           <section>
             <h2>Education</h2>
             {education.map((data) => (
@@ -29,7 +51,7 @@ function CVOutput({ personal, education, experience }) {
             ))}
           </section>
         )}
-        {!!experience && (
+        {!!experience.length > 0 && (
           <section>
             <h2>Professional Experience</h2>
             {experience.map((data) => (
