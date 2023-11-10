@@ -1,3 +1,5 @@
+import "/src/styles/form.css";
+
 function ExperienceForm({ data, setData }) {
   const { company, position, start, end, location, description } = data;
 
