@@ -1,3 +1,5 @@
+import "/src/styles/form.css";
+
 function EducationForm({ data, setData }) {
   const { school, degree, start, end, location } = data;
 
