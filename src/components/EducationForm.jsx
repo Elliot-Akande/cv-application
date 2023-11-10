@@ -13,6 +13,8 @@ function EducationForm({ data, setData }) {
             id="school"
             value={school}
             onChange={(e) => setData("school", e.target.value)}
+            autoComplete="on"
+            autoCapitalize="on"
           />
         </li>
         <li>
@@ -22,6 +24,7 @@ function EducationForm({ data, setData }) {
             id="degree"
             value={degree}
             onChange={(e) => setData("degree", e.target.value)}
+            autoComplete="on"
           />
         </li>
         <li>
@@ -31,6 +34,7 @@ function EducationForm({ data, setData }) {
             id="start"
             value={start}
             onChange={(e) => setData("start", e.target.value)}
+            autoComplete="on"
           />
         </li>
         <li>
@@ -40,6 +44,7 @@ function EducationForm({ data, setData }) {
             id="end"
             value={end}
             onChange={(e) => setData("end", e.target.value)}
+            autoComplete="on"
           />
         </li>
         <li>
@@ -49,6 +54,8 @@ function EducationForm({ data, setData }) {
             id="location"
             value={location}
             onChange={(e) => setData("location", e.target.value)}
+            autoComplete="location"
+            autoCapitalize="on"
           />
         </li>
       </ul>
