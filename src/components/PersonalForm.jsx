@@ -1,3 +1,5 @@
+import "/src/styles/form.css";
+
 function PersonalForm({ data, setData }) {
   const { name, email, phone, address } = data;
 
